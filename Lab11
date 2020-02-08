@@ -1,0 +1,72 @@
+using System;
+
+namespace Lab_11
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            
+            
+            int[] res = new int[11];
+            int start = 0, stop;
+
+            Console.Write("How many times would you like to roll these two dice? ");
+            stop = Convert.ToInt32(Console.ReadLine());
+
+
+
+            for (int d1, d2, total; start < stop; start++)
+            {
+                Random rndm1 = new Random(), rndm2 = new Random();
+
+                d1 = rndm1.Next(1, 7);
+                d2 = rndm2.Next(1, 7);
+
+                total = d1 + d2;
+
+                for (int a = 2; a == total; a++)
+                    res[0]++;
+
+                for (int b = 3; b == total; b++)
+                    res[1]++;
+
+                for (int a = 4; a == total; a++)
+                    res[2]++;
+
+                for (int a = 5; a == total; a++)
+                    res[3]++;
+
+                for (int a = 6; a == total; a++)
+                    res[4]++;
+
+                for (int a = 7; a == total; a++)
+                    res[5]++;
+
+                for (int a = 8; a == total; a++)
+                    res[6]++;
+
+                for (int a = 9; a == total; a++)
+                    res[7]++;
+
+                for (int a = 10; a == total; a++)
+                    res[8]++;
+
+                for (int a = 11; a == total; a++)
+                    res[9]++;
+
+                for (int a = 12; a == total; a++)
+                    res[10]++;
+            }
+
+            for (int face = 2; face < 13; face++)
+            {
+                Console.WriteLine("You rolled {0} {1} times", face, res[face-2]);
+            }
+
+            Console.ReadKey();
+
+        }
+    }
+}
