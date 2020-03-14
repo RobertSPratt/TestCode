@@ -1,0 +1,41 @@
+
+score = 0
+
+num1 = input("What is 3 + 4? ")
+if num1 == 7:
+    print("That's correct!")
+    score = score + 1
+else:
+    print("That's incorrect.")
+
+num2 = input("What is 10 - 7? ")
+if num2 == 3:
+    print("That's correct!")
+    score = score + 1
+else:
+    print("That's incorrect.")
+
+num3 = input("What is 2 * 8? ")
+if num3 == 16:
+    print("That's correct!")
+    score = score + 1
+else:
+    print("That's incorrect.")
+
+num4 = input("What is 20 / 2? ")
+if num4 == 10:
+    print("That's correct!")
+    score = score + 1
+else:
+    print("That's incorrect.")
+
+print("You got " + str(score) + " out of 4 correct.")
+
+if score == 4:
+    print("Congrats! You got a perfect score!")
+elif score == 3:
+    print("Good job! You got a 75%!")
+elif score == 2:
+    print("Nice try, but you could do better.")
+else:
+    print("You should review your math.")
